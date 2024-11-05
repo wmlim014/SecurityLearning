@@ -4,8 +4,8 @@
     ```
     python3 Connect.py <username> new
     ```
-    > [!IMPORTANT]
-    > The username and password will be save in "Passwords.txt"
+> [!IMPORTANT]
+> The username and password will be save in "Passwords.txt"
 
 2. Refer to step 2 to get ***One-Time Pin***
 
@@ -26,8 +26,8 @@
     ```
     python Connect.py <username> new
     ```
-    > [!IMPORTANT]
-    > The username and password will be save in "Passwords.txt"
+> [!IMPORTANT]
+> The username and password will be save in "Passwords.txt"
 
 2. Refer to Step 2 to get ***One-Time Pin***
 
