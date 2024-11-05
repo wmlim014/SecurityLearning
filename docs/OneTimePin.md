@@ -1,4 +1,4 @@
-# ONE TIME PIN IN VM MACHINE
+# IN VM MACHINE
 ## Step 1: Open a terminal for Connect.py
 1. Create new user:
     ```
@@ -20,7 +20,7 @@
     python3 Device.py <username> <passoword>
     ```
 
-# ONE TIME PIN IN WINDOW
+# IN WINDOW
 ## Step 1: Open a terminal for Connect.py
 1. Create new user:
     ```
