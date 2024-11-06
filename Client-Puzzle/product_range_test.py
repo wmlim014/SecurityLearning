@@ -57,7 +57,7 @@ for j in product(range(min, max + 1), repeat = time_repeat):
 '''
 
 # Test with each expected hash (E)
-num_sub_puzzles = 3
+num_sub_puzzles = 6
 k = 4
 worst_hashes = num_sub_puzzles * (k ** 2) # Worst Expected Hashes (WE) = number of sub-puzzle * (2^k)
 
@@ -68,7 +68,7 @@ ALL_COMBINATIONS = set()
 for i in range(num_sub_puzzles, worst_hashes + 1):
     no_of_combinations = 0    # Reset number of possible combination for current hash
 
-    if i <= (k + 1):
+    if i <= (k):
         combinations = product(range(1, (i + 1)), repeat = num_sub_puzzles)
 
     else:

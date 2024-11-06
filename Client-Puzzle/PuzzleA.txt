@@ -1,0 +1,126 @@
+Puzzle A
+------------------------------------------------------------
+
+Distributions:
+Expected Hash: 1
+Number of Combinations [Frequency (f)]: 1
+Current Combinations:
+[(1,)]
+------------------------------------------------------------
+Expected Hash: 2
+Number of Combinations [Frequency (f)]: 1
+Current Combinations:
+[(2,)]
+------------------------------------------------------------
+Expected Hash: 3
+Number of Combinations [Frequency (f)]: 1
+Current Combinations:
+[(3,)]
+------------------------------------------------------------
+Expected Hash: 4
+Number of Combinations [Frequency (f)]: 1
+Current Combinations:
+[(4,)]
+------------------------------------------------------------
+Expected Hash: 5
+Number of Combinations [Frequency (f)]: 1
+Current Combinations:
+[(5,)]
+------------------------------------------------------------
+Expected Hash: 6
+Number of Combinations [Frequency (f)]: 1
+Current Combinations:
+[(6,)]
+------------------------------------------------------------
+Expected Hash: 7
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 8
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 9
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 10
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 11
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 12
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 13
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 14
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 15
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 16
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 17
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 18
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 19
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 20
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 21
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 22
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 23
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 24
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 25
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 26
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 27
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 28
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 29
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 30
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 31
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 32
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 33
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 34
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 35
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Expected Hash: 36
+Number of Combinations [Frequency (f)]: 0
+------------------------------------------------------------
+Worst Expected Hash: 36
+Total Combinations: 6
