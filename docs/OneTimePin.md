@@ -1,3 +1,7 @@
+```
+cd One-Time-Pin
+```
+
 # IN VM MACHINE
 ## Step 1: Open a terminal for Connect.py
 1. Create new user:

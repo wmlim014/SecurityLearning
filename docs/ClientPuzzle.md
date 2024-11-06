@@ -1,5 +1,5 @@
 ```
-cd \Client-Puzzle
+cd Client-Puzzle
 ```
 
 # product_range_test.py
