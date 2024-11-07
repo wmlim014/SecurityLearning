@@ -20,4 +20,3 @@ This file is to modify the code from [product_range_test.py](#product_range_test
 ```
 python puzzle.py
 ```
-> Generated output will be prompt in command promt (terminal) and also output a file (such the the long output still can retrieve)
