@@ -20,3 +20,6 @@ This file is to modify the code from [product_range_test.py](#product_range_test
 ```
 python puzzle.py
 ```
+
+# final_puzzle.ipynb
+Convert the python file to jupyter notebook to save time, e.g. no need to run from start to end for specific result but all the output is available to view forever after one run.
