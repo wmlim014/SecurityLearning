@@ -26,9 +26,9 @@ cd /home/seed/Share/7894363_A1/src
 Generate the Diffie-Hellman parameters (p, g), choose a password PW for Bob and save (p, g, H(PW)) in 
 a text file named `pwSheets.txt` under the directory of Alice.
 > [!NOTE]
-> 1. p = random Prime number generated between 1 to 100<br/>
-> 2. g = a primitive root of `p` (*random int in range 1 < g < p*)<br/>
-> 3. H(PW) = hashed string for selected password (*Please input the password you choose*)<br/>
+> 1. p = random Prime number generated between 1 to 100
+> 2. g = a primitive root of `p` (*random int in range 1 < g < p*)
+> 3. H(PW) = hashed string for selected password (*Please input the password you choose*)
 > 4. Selected Password = required contains at least 6 alphanumeric characters characters (*(A-Z, both uppercase and lowercase) and numbers (0-9)*)
 
 *<ins>You could need to update `line 20` of file <b>Setup.java</b> to `Alice/pwSheets.txt` for linux VM machine</ins>*
