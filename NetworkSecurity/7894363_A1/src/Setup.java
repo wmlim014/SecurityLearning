@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 import java.math.BigInteger;
 import java.security.*;
 
@@ -11,6 +12,17 @@ import java.security.*;
  * Main Reference: https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/
  */
 public class Setup {
+    
+    // Gobals variables for use in functions
+    // File path to allocate the password sheet
+    // In Window VS Code: "src/Alice/pwSheets.txt"
+    // In Lunix VM: "Alice/pwSheets.txt"
+    final private static String FILE_PATH = "src/Alice/pwSheets.txt";
+    // Regex to check if the password contained at least 6 alphanumeric characters
+    // Pattern Check: https://www.w3schools.com/tags/att_input_pattern.asp
+    // Main Reference: https://www.geeksforgeeks.org/dsa/how-to-check-string-is-alphanumeric-or-not-using-regular-expression/
+    final private static String REGEX = "^[A-Za-z0-9]{6,}$"; 
+    
     // 1. Generate the Diffie-Hellman Parameters (p, g)
     // P = random prime number
     // G = a primitive root of P (random int in range 1 < G < P)
@@ -52,6 +64,22 @@ public class Setup {
         return true;
     }
 
+    // Function to check is the password meet requrements
+    // Contained at least 6 alphanumeric characters characters 
+    // (A-Z, both uppercase and lowercase) and numbers (0-9)
+    // https://www.geeksforgeeks.org/dsa/how-to-check-string-is-alphanumeric-or-not-using-regular-expression/
+    private static boolean isPwMeetReq(String inputString) {
+        // If input string is empty, return false
+        if (inputString == null) return false;
+        
+        Pattern p = Pattern.compile(REGEX);
+        // Pattern class contains matcher() method to: 
+        // find matching between given string and
+        // regular expression
+        Matcher m = p.matcher(inputString);
+        return m.matches(); // return if the string matched the ReGex
+    }
+
     // Hash the selected password
     // https://www.geeksforgeeks.org/java/sha-1-hash-in-java/
     private static String hashPw(String inputString) {
@@ -79,18 +107,14 @@ public class Setup {
     // Save (p, g, H(PW)) into a text file under the directory of Alice
     private static void writeToFile(String client, int P, int G, String hashedStr){
         try {
-            // Get project path dynamically
-            // final String DIR_PATH = PROJECT_ROOT + File.separator + "Alice";
-            final String PATH = "src/Alice/pwSheets.txt";
-            
             // Create directory if missing
             new File("Alice").mkdirs();
 
-            FileWriter writer = new FileWriter(PATH);
+            FileWriter writer = new FileWriter(FILE_PATH);
             // Write into file
             writer.write(client + ", " + P + ", " + G + ", " + hashedStr + "\n");
             writer.close();
-            System.out.println(client + "'s p, g and H(pw) saved successfully in " + PATH);
+            System.out.println(client + "'s p, g and H(pw) saved successfully in " + FILE_PATH);
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
@@ -109,8 +133,19 @@ public class Setup {
         // 2. Choose a password "PW" for Bob
         System.out.print("Choose a password for Bob: ");
         String pw = input.nextLine(); // Read user input
+
+        while(!isPwMeetReq(pw)) {   // While the selected password does not meet requirement...
+            // Prompt error
+            System.out.println("The password must contained at least 6 alphanumeric characters...");
+            // Prompt user input again
+            System.out.print("Choose a password for Bob: ");
+            pw = input.nextLine(); // Read user input
+        }
+
         String hashedStr = hashPw(pw); // Hash the password with SHA-1
         // 3. Save (p, g, H(PW)) into a text file under the directory of Alice
         writeToFile("Bob", publicKeyPair[0], publicKeyPair[1], hashedStr);
+        System.out.println("Host setup completed, please proceed to Host and Client terminal for the rest execution.");
+        System.exit(0); // Terminate Program
     }
 }
