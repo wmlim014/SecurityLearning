@@ -17,19 +17,19 @@ sudo apt install default-jdk
 ## Before Execution...
 1. Unzip and allocate the submitted folder (`7894363_A1`) into share VM_Share folder.
 2. Open a terminal and redirect the dictionary into program folder: 
-> ```
-> cd /home/seed/Share/7894363_A1/src
-> ```
+```
+cd /home/seed/Share/7894363_A1/src
+```
 
 ## Start Execution
 ### Setup of Host
 Generate the Diffie-Hellman parameters (p, g), choose a password PW for Bob and save (p, g, H(PW)) in 
 a text file named `pwSheets.txt` under the directory of Alice.
 > [!NOTE]
-> p = random Prime number generated between 1 to 100<br/>
-> g = a primitive root of `p` (*random int in range 1 < g < p*)<br/>
-> H(PW) = hashed string for selected password (*Please input the password you choose*)<br/>
-> Selected Password = required contains at least 6 alphanumeric characters characters (*(A-Z, both uppercase and lowercase) and numbers (0-9)*)
+> 1. p = random Prime number generated between 1 to 100<br/>
+> 2. g = a primitive root of `p` (*random int in range 1 < g < p*)<br/>
+> 3. H(PW) = hashed string for selected password (*Please input the password you choose*)<br/>
+> 4. Selected Password = required contains at least 6 alphanumeric characters characters (*(A-Z, both uppercase and lowercase) and numbers (0-9)*)
 
 *<ins>You could need to update `line 20` of file <b>Setup.java</b> to `Alice/pwSheets.txt` for linux VM machine</ins>*
 ```
