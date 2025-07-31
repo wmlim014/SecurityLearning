@@ -1,8 +1,8 @@
 # Student Information
-Student Name: Lim Wen Mi
-UOW ID: 7894363
-Submission For: CSCI368 Assignment 1
-*All the references for each stage are listed as command line within each Program files*
+Student Name: Lim Wen Mi<br/>
+UOW ID: 7894363<br/>
+Submission For: CSCI368 Assignment 1<br/>
+*All the references for each stage are listed as command line within each Program files*<br/>
 **GitHub: https://github.com/wmlim014/SecurityLearning/tree/main/NetworkSecurity/7894363_A1**
 
 # Steps for Program Execution in DEES VM Machine
