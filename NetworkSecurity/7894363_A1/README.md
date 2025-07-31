@@ -26,9 +26,9 @@ sudo apt install default-jdk
 Generate the Diffie-Hellman parameters (p, g), choose a password PW for Bob and save (p, g, H(PW)) in 
 a text file named `pwSheets.txt` under the directory of Alice.
 > [!NOTE]
-> p = random Prime number generated between 1 to 100
-> g = a primitive root of `p` (*random int in range 1 < g < p*)
-> H(PW) = hashed string for selected password (*Please input the password you choose*)
+> p = random Prime number generated between 1 to 100<br/>
+> g = a primitive root of `p` (*random int in range 1 < g < p*)<br/>
+> H(PW) = hashed string for selected password (*Please input the password you choose*)<br/>
 > Selected Password = required contains at least 6 alphanumeric characters characters (*(A-Z, both uppercase and lowercase) and numbers (0-9)*)
 
 *<ins>You could need to update `line 20` of file <b>Setup.java</b> to `Alice/pwSheets.txt` for linux VM machine</ins>*
@@ -38,7 +38,7 @@ javac Setup.java
 ```
 java Setup
 ```
-**The file will be stored as the following information: Username, p, g, H(PW)**
+**The file will be stored as the following information: <ins>Username, p, g, H(PW)</ins>**
 
 # APPENDIX: Default Documentation From VSCode in Window Host Machine
 ## Getting Started
