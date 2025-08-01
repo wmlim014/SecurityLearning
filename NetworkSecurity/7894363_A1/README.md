@@ -14,14 +14,25 @@ sudo apt update
 sudo apt install default-jdk
 ```
 
+## Mount VM Shared Folder
+```
+mkdir -p ~/Share
+sudo mount -t vboxsf VM_Shared ~/Share
+```
+
 ## Before Execution...
 1. Unzip and allocate the submitted folder (`7894363_A1`) into share VM_Share folder.
 2. Open a terminal and redirect the dictionary into program folder: 
 ```
-cd /home/seed/Share/7894363_A1/src
+cd /home/seed/Share/7894363_A1
 ```
 
 ## Start Execution
+## Create Java Class
+```
+javac src/Setup.java src/Alice/Host.java src/Bob/Client.java src/Crypto/RC4.java src/Alice/User.java
+```
+
 ### Setup of Host
 Generate the Diffie-Hellman parameters (p, g), choose a password PW for Bob and save (p, g, H(PW)) in 
 a text file named `pwSheets.txt` under the directory of Alice.
@@ -33,12 +44,26 @@ a text file named `pwSheets.txt` under the directory of Alice.
 
 *<ins>You could need to update `line 20` of file <b>Setup.java</b> to `Alice/pwSheets.txt` for linux VM machine</ins>*
 ```
-javac Setup.java
-```
-```
-java Setup
+java -cp src Setup
 ```
 **The file will be stored as the following information: <ins>Username, p, g, H(PW)</ins>**
+
+### Host and Client Execution
+> [!NOTE]
+> Need to open two terminals, a terminal for Host, another for Client<br/>
+> Selected port = 363<br/>
+> *If you like to change the port can change the `363` in `PORT` variable from both `Host.java (line 19)` and `Client.java (line 10)` to the port you selected. But both port <ins>must change to same value</ins>.*
+> Reference: https://www.geeksforgeeks.org/java/socket-programming-in-java/
+**HOST TERMINAL WINDOW**
+```
+java -cp src Alice.Host
+```
+
+**CLIENT TERMINAL WINDOW**
+> **To Terminate Host Connection:** type `exit`<br/>
+```
+java -cp src Bob.Client
+```
 
 # APPENDIX: Default Documentation From VSCode in Window Host Machine
 ## Getting Started

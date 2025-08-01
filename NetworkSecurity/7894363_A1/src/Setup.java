@@ -1,3 +1,4 @@
+/* UOW ID: 7894363 */
 import java.io.*;
 import java.util.*;
 import java.util.regex.*;
@@ -12,16 +13,13 @@ import java.security.*;
  * Main Reference: https://www.geeksforgeeks.org/computer-networks/implementation-diffie-hellman-algorithm/
  */
 public class Setup {
-    
     // Gobals variables for use in functions
     // File path to allocate the password sheet
-    // In Window VS Code: "src/Alice/pwSheets.txt"
-    // In Lunix VM: "Alice/pwSheets.txt"
-    final private static String FILE_PATH = "src/Alice/pwSheets.txt";
+    private static final String FILE_PATH = "src/Alice/pwSheets.txt";
     // Regex to check if the password contained at least 6 alphanumeric characters
     // Pattern Check: https://www.w3schools.com/tags/att_input_pattern.asp
     // Main Reference: https://www.geeksforgeeks.org/dsa/how-to-check-string-is-alphanumeric-or-not-using-regular-expression/
-    final private static String REGEX = "^[A-Za-z0-9]{6,}$"; 
+    private static final String REGEX = "^[A-Za-z0-9]{6,}$"; 
     
     // 1. Generate the Diffie-Hellman Parameters (p, g)
     // P = random prime number
@@ -39,7 +37,7 @@ public class Setup {
 
     // Generate prime number "P"
     // https://stackoverflow.com/questions/24006143/generating-a-random-prime-number-in-java
-    private static int generatePrime(){
+    private static int generatePrime() {
         final int MAX = 100;
         final int MIN = 1; 
         // Generate a prime number within range min to max
@@ -54,7 +52,7 @@ public class Setup {
     }
     // Check is the number a prime
     // https://www.mygreatlearning.com/blog/prime-number-program-in-java/
-    private static boolean isPrime(int inputNum){
+    private static boolean isPrime(int inputNum) {
         if (inputNum <= 1) return false;
         if (inputNum == 2) return true;
         if (inputNum % 2 == 0) return false;
@@ -105,7 +103,7 @@ public class Setup {
 
     // https://www.geeksforgeeks.org/java/java-program-to-write-into-a-file/
     // Save (p, g, H(PW)) into a text file under the directory of Alice
-    private static void writeToFile(String client, int P, int G, String hashedStr){
+    private static void writeToFile(String client, int P, int G, String hashedStr) {
         try {
             // Create directory if missing
             new File("Alice").mkdirs();
